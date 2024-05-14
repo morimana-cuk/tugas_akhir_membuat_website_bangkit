@@ -1,0 +1,89 @@
+body {
+    padding: 5px;
+    margin: 5px;
+    
+   
+  }
+  
+  .navbar-container {
+    width: 100%;
+    max-width: 1200px;
+    padding-block: 1rem;
+    margin-inline: auto;
+    background-color: white;
+    display: flex;
+    justify-content: space-between; /* Menggunakan space-between agar navbar dan gambar terpisah dengan maksimal */
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .nama {
+    font-style: normal;
+    font-size: 50px;
+  }
+  
+  .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+    background-color: white;
+  }
+  
+  .nav-list li {
+    background-color: white;
+    color: white; 
+  }
+  
+  .content {
+    margin: 0 0 0 0;
+    flex: 4;
+    background-color: white;
+    text-align: center;
+  }
+  
+  main {
+    margin-top: 50px;
+    display: flex;
+    
+    
+
+  }
+
+  .gambar {
+    max-width: 100px; /* Mengubah ukuran gambar agar sesuai dengan lebar aside */
+    height: auto; /* Menjaga proporsi gambar */
+    margin: 0 0 0 13% ;
+    border-radius: 1000%; /* Menetapkan bingkai lingkaran */
+    overflow: hidden; /* Mengatasi gambar yang keluar dari bingkai lingkaran */
+    
+  }
+
+  aside{
+    background-color: white;
+    flex: 1;
+  }
+
+
+  
+  .articles {
+    flex-grow: 1; /* Memungkinkan artikel untuk mengambil sisa ruang yang tersedia */
+  }
+   .content-item {
+     /* Semua konten disembunyikan secara default */
+    /*display: none;*/ 
+} 
+footer{
+  display: flex;
+  position: sticky;
+ 
+  /* width: 100%; */
+  background-color: white;
+  color: black;
+  /* padding: 10px 20px; */
+  margin-top: 25%;
+  /* padding-top: 50px; */
+  z-index: 999; /* Pastikan footer berada di atas konten */
+  justify-content: center;
+}
+

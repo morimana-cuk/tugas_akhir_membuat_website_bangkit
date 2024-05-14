@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css\app.css">
+</head>
+<body>
+    <header class="navbar-container">
+        <div class="nama">
+            Morimana
+        </div>
+        <nav class="nav-list">
+            <ul>
+                <li><a href="#" id="homeLink">HOME</a></li>
+                <li><a href="#" id="projectLink">PROJECT</a></li>
+                <li><a href="#" id="postsLink">POSTS</a></li>
+                <li><a href="#" id="aboutLink">ABOUT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="">
+        <div class="content ">
+
+            <article id="homeContent" class="content-item">
+                ini home
+                <p>
+                    silahkan tekan "project", "posts", "about" yang ada di navbar
+                </p> 
+            </article>
+            <article id="projectContent" class="content-item">
+                ini project
+            </article>
+            <article id="postsContent" class="content-item">
+                ini posts
+            </article>
+            <article id="aboutContent" class="content-item">
+                <p>hai nama saya Mohammad Rizal Maulana Najib</p>
+            </article>
+        </div>
+        <aside>
+            <div class="gambar">
+                <img src="https://storage.googleapis.com/asset_tugas1_mgce/asset/download.jpg" alt="" srcset="" width="85" height="auto">
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <p>Ini adalah footer tetap. Footer ini akan tetap diam di bawah saat Anda menggulir halaman.</p>
+    </footer>
+    <script>
+        const homeLink = document.getElementById('homeLink');
+        const projectLink = document.getElementById('projectLink');
+        const postsLink = document.getElementById('postsLink');
+        const aboutLink = document.getElementById('aboutLink');
+        
+        const homeContent = document.getElementById('homeContent');
+        const projectContent = document.getElementById('projectContent');
+        const postsContent = document.getElementById('postsContent');
+        const aboutContent = document.getElementById('aboutContent');
+        
+        // Menambahkan event listener untuk setiap tautan navbar
+        homeLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            displayContent('homeContent');
+        });
+        
+        projectLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            displayContent('projectContent');
+        });
+        
+        postsLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            displayContent('postsContent');
+        });
+        
+        aboutLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            displayContent('aboutContent');
+        });
+        
+        // Fungsi untuk menampilkan konten yang sesuai
+        function displayContent(contentId) {
+            const allContents = document.querySelectorAll('.content-item');
+            allContents.forEach(content => {
+                content.style.display = 'none';
+            });
+            document.getElementById(contentId).style.display = 'block';
+        }
+        //default home
+        displayContent('homeContent');
+    </script>
+</body>
+</html>
